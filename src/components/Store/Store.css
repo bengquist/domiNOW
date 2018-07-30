@@ -1,0 +1,60 @@
+.store-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 25%;
+  border-radius: 5px;
+}
+
+.store-card:hover {
+  cursor: pointer;
+}
+
+.store-logo {
+  margin: 0 auto;
+  width: 20%;
+}
+
+.store-card {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.store-card:hover .flipper, .store-card.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.store-card, .store-front, .store-back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.store-front, .store-back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.store-front {
+  background: slateblue;
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.store-back {
+  background: salmon;
+	transform: rotateY(180deg);
+}
