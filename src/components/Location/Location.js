@@ -23,6 +23,7 @@ export default class Location extends Component {
   getAddress = () => {
     let lat = PropTypes.number;
     let long = PropTypes.number;
+    // console.log(navigator.geolocation.getCurrentPosition);
 
     navigator.geolocation.getCurrentPosition(
       position => {
@@ -43,7 +44,7 @@ export default class Location extends Component {
 
             axios
               .get(
-                `https://api.eatstreet.com/publicapi/v1/restaurant/search?method=both&pickup-radius=10&street-address=${formattedAddress}&access-token=${
+                `https://api.eatstreet.com/publicapi/v1/restaurant/search?method=both&pickup-radius=50&street-address=${formattedAddress}&access-token=${
                   process.env.REACT_APP_EATSTREET_API_KEY
                 }`
               )
