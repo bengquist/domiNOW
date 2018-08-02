@@ -37,10 +37,20 @@ export default props => {
           <h3>
             {streetAddress}, {state}, {zip}
           </h3>
+          <p>{phone}</p>
+          <p>{foodTypes}</p>
+          <p>
+            Wait Time: {minWaitTime}-{maxWaitTime} mins.
+          </p>
+          {offersDelivery && <p>Delivery: {deliveryMin} mins.</p>}
+          {offersPickup && <p>Pickup</p>}
           {open ? <p>Open</p> : <p>Closed</p>}
         </div>
         <div className="store-back">
           {formattedHours.map(val => <p>{val}</p>)}
+          <a href={url} target="_blank">
+            Visit Site
+          </a>
         </div>
       </div>
     </Link>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Geocode from "react-geocode";
 import axios from "axios";
+import "./Location.css";
 
 import Store from "../Store/Store";
 

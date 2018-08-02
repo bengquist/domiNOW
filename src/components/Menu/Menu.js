@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import MenuSection from "../MenuSection/MenuSection";
 import axios from "axios";
+import "./Menu.css";
 
 export default class Menu extends Component {
   state = {
@@ -20,8 +22,15 @@ export default class Menu extends Component {
   }
 
   render() {
-    console.log(this.state.items);
+    const { items } = this.state;
+    let itemList;
+    items &&
+      (itemList = items.map(val => {
+        const { apiKey, name, items } = val;
 
-    return <div>Menu</div>;
+        return <MenuSection sectionKey={apiKey} section={name} items={items} />;
+      }));
+
+    return <div className="menu">{itemList}</div>;
   }
 }
