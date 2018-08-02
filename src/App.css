@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Palanquin Dark', sans-serif;
 }
 
 .App-logo {
@@ -22,7 +23,10 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+body {
+  background: rgb(235, 245, 239);
 }

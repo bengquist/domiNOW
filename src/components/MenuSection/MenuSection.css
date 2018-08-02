@@ -1,3 +1,31 @@
 .menu-section {
-  border: 1px solid #000;
+  margin: 30px;
+  overflow: auto;
+  height:400px;
+}
+
+.menu-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.section-name {
+  font-size: 35px;
+  position: sticky;
+  top: 0;
+  padding-bottom: 40px;
+  background: rgb(235, 245, 239);
+}
+
+.menu-item-name {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.menu-item-description {
+  margin-bottom: 10px;
 }
